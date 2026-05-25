@@ -30,7 +30,7 @@ We have included a "Smart Launcher" script (`launcher.bat`) that automatically h
 
 ### 1. Download the Project
 ```powershell
-# Clone this repository
+# Clone this repository (to your preferred location)
 git clone https://github.com/joseRey/noai-watermark-pyGUI.git
 cd noai-watermark-pyGUI
 ```
