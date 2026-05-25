@@ -20,40 +20,32 @@ First and foremost, massive praise goes to **[mertizci](https://github.com/merti
 ## 💻 Prerequisites
 
 Before running this application, your system must have:
-* **Windows 10/11** (for the automated installer)
+* **Windows 10/11**
 * **Python 3.10 or higher**: You can download this from [python.org](https://www.python.org/downloads/). 
   > **CRITICAL:** When installing Python, you **must** check the box that says "Add Python to PATH" on the very first installation screen.
 
 ## 🚀 Installation & Usage
 
-There are two ways to install and run this application depending on your preference:
+We have included a "Smart Launcher" script (`launcher.bat`) that automatically handles all of the installation and virtual environment setup for you!
 
-### Method 1: The One-Click Windows Installer (Recommended)
-
-If you just want the software to work without messing with code:
-1. Go to the [Releases](https://github.com/joseRey/noai-watermark-pyGUI/releases) page on this GitHub repository.
-2. Download the `WatermarkRemover_Setup.exe` file and double click it to install.
-3. This will create a Desktop Shortcut and a Start Menu entry. 
-4. **First Run:** When you open the shortcut for the first time, a terminal window will temporarily appear to download the heavy AI models and libraries (~4 GB). Please be patient! Once finished, the graphical interface will open.
-
-### Method 2: Manual Installation for Developers
-
-If you prefer to run the code directly from the source:
-
+### 1. Download the Project
 ```powershell
 # Clone this repository
 git clone https://github.com/joseRey/noai-watermark-pyGUI.git
 cd noai-watermark-pyGUI
-
-# Run the smart launcher script
-# This script will automatically create a virtual environment, 
-# download the dependencies, and launch the GUI silently!
-launcher.bat
 ```
 
-## 🛠️ Building the Installer Yourself
+### 2. Launch the Application
+Just double-click the **`launcher.bat`** file in the main folder!
 
-If you are a developer and want to compile the `.exe` installer yourself:
-1. Download and install [Inno Setup Compiler](https://jrsoftware.org/isdl.php).
-2. Open the `installer.iss` file included in this repository.
-3. Click the "Compile" button. A fully standalone setup executable will be generated instantly.
+* **On the First Run:** The script will automatically create a secure Python virtual environment and download all the required libraries and heavy AI models (~4 GB). A terminal window will stay open for a few minutes while it downloads.
+* **On Future Runs:** The script will instantly launch the GUI without any terminals popping up!
+
+### 3. How to Use
+
+1. Click **"1. Select Folder to Scan"** and choose a directory containing your images.
+2. The application will scan the folder and display a table of all images containing AI metadata or hidden watermarks.
+3. Click **"2. Remove Watermarks from Detected Images"**.
+4. Grab a coffee! The application will initialize GPU acceleration, and visually update the progress table as each image is stripped and cleaned.
+
+*Note: The cleaned images will overwrite the original files to ensure your workflow remains clutter-free.*
